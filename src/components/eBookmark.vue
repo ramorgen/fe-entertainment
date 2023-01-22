@@ -17,7 +17,7 @@ import store from '../store';
 
    const clicked = () => {
       props.film.isBookmarked = !props.film.isBookmarked
-      store.getMain()
+      store.filter()
    }
 
    const _class = computed(()=>{
