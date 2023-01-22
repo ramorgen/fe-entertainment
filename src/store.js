@@ -26,29 +26,30 @@ const  store = reactive({
 
 
    filter: (inp="") => {
+      let _inp = inp.toLowerCase()
       if (store.currentRoute === 'home'){
          store.title = 'Recommended for you'
          store.daten = store.raw.filter((item) => {
-            return (item.title.toLowerCase().includes(inp) && !item.isTrending)
+            return (item.title.toLowerCase().includes(_inp) && !item.isTrending)
          })
       }
 
       if (store.currentRoute === 'movies'){
          store.title = 'Movies'
          store.daten = store.raw.filter((item) => {
-            return (item.title.toLowerCase().includes(inp) && item.category==='Movie')
+            return (item.title.toLowerCase().includes(_inp) && item.category==='Movie')
          })
       }         
       if (store.currentRoute === 'tv'){
          store.title = 'TV Series'
          store.daten = store.raw.filter((item) => {
-            return (item.title.toLowerCase().includes(inp) && item.category==='TV Series')
+            return (item.title.toLowerCase().includes(_inp) && item.category==='TV Series')
          })
       }         
       if (store.currentRoute === 'bookmark'){
          store.title = 'Bookmarked Movies and TV Series'
          store.daten = store.raw.filter((item) => {
-            return (item.title.toLowerCase().includes(inp) && item.isBookmarked)
+            return (item.title.toLowerCase().includes(_inp) && item.isBookmarked)
          })
       }       
    }
