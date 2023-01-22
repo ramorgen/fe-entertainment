@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+/* outfit-300 - latin */
+@font-face {
+   font-family: 'Outfit';
+   font-style: normal;
+   font-weight: 300;
+   src: local(''),
+        url('../fonts/outfit-v6-latin-300.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+ }
+ 
+ /* outfit-500 - latin */
+ @font-face {
+   font-family: 'Outfit';
+   font-style: normal;
+   font-weight: 500;
+   src: local(''),
+        url('../fonts/outfit-v6-latin-500.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+ }
+ 
+ h1 {
+   font-size: 20px;
+   letter-spacing: -0.31px;
+   line-height: 25px;
+}
+h3 {
+   font-size: .937rem;
+   font-weight: 300;
+ }
+ h5 {
+   font-size: .75rem;
+   font-weight: 300;
+   opacity: .55;
+   mix-blend-mode: normal;
+}
+
+@media screen and (min-width: 768px){
+ h1 {
+   font-size: 2rem;
+   letter-spacing: -0.5px;
+   line-height: 40px;
+   font-weight: 300;
+   }
+   h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+   h4 {
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+   h5 {
+      font-size: .937rem;
+      font-weight: 300;
+      opacity: .55;
+      mix-blend-mode: normal;
+   }
+ }
+
+ h2 {
+   font-size: 1.5rem;
+   font-weight: 300;
+ }
+ 
+ h4 {
+   font-size: 1.125rem;
+   font-weight: 500;
+ }
+
+}
